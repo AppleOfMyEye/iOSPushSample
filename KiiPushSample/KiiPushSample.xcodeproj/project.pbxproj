@@ -24,6 +24,7 @@
 		74206F1B16B93E3100CA8AA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74206F1916B93E3100CA8AA6 /* InfoPlist.strings */; };
 		74206F1E16B93E3100CA8AA6 /* KiiPushSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74206F1D16B93E3100CA8AA6 /* KiiPushSampleTests.m */; };
 		74206F2816B93E5C00CA8AA6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74206F2716B93E5C00CA8AA6 /* MobileCoreServices.framework */; };
+		74CB2C9916CB42DA00EAF472 /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CB2C9816CB42DA00EAF472 /* KiiSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		74206F1C16B93E3100CA8AA6 /* KiiPushSampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiiPushSampleTests.h; sourceTree = "<group>"; };
 		74206F1D16B93E3100CA8AA6 /* KiiPushSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiPushSampleTests.m; sourceTree = "<group>"; };
 		74206F2716B93E5C00CA8AA6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		74CB2C9816CB42DA00EAF472 /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				74206EED16B93E3000CA8AA6 /* UIKit.framework in Frameworks */,
 				74206EEF16B93E3000CA8AA6 /* Foundation.framework in Frameworks */,
 				74206EF116B93E3000CA8AA6 /* CoreGraphics.framework in Frameworks */,
+				74CB2C9916CB42DA00EAF472 /* KiiSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +113,7 @@
 		74206EEB16B93E3000CA8AA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74CB2C9816CB42DA00EAF472 /* KiiSDK.framework */,
 				74206EEC16B93E3000CA8AA6 /* UIKit.framework */,
 				74206EEE16B93E3000CA8AA6 /* Foundation.framework */,
 				74206EF016B93E3000CA8AA6 /* CoreGraphics.framework */,
@@ -339,6 +343,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -354,6 +359,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -370,6 +376,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -378,6 +385,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -386,6 +394,10 @@
 		74206F2216B93E3100CA8AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiiPushSample/KiiPushSample-Prefix.pch";
 				INFOPLIST_FILE = "KiiPushSample/KiiPushSample-Info.plist";
@@ -398,6 +410,10 @@
 		74206F2316B93E3100CA8AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiiPushSample/KiiPushSample-Prefix.pch";
 				INFOPLIST_FILE = "KiiPushSample/KiiPushSample-Info.plist";
@@ -460,6 +476,7 @@
 				74206F2316B93E3100CA8AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74206F2416B93E3100CA8AA6 /* Build configuration list for PBXNativeTarget "KiiPushSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +485,7 @@
 				74206F2616B93E3100CA8AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
