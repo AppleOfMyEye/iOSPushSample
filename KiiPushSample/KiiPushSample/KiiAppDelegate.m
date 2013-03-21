@@ -12,11 +12,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Kii beginWithID:@"65457c51"
-              andKey:@"80ad5019e0c96eb3b8b1ec293c29792e"
-             andSite:kiiSiteUS];
-    [self apnsAuth];
-    [self testSendExpicitPush];
+    [Kii beginWithID:@"b58eee48"
+              andKey:@"c5abe20b006c3883e1151eb80a2f979c"
+             andSite:kiiSiteJP];
+//    [self apnsAuth];
+//    [self testSendExpicitPush];
     //[Kii enableAPNSWithDevelopmentMode:YES andNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     
     // Override point for customization after application launch.
@@ -48,7 +48,7 @@
 -(void) apnsAuth{
     NSError* error;
     
-    KiiUser* user=[KiiUser authenticateSynchronous:@"test1360737152" withPassword:@"kii12345" andError:&error];
+    KiiUser* user=[KiiUser authenticateSynchronous:@"test1362712301" withPassword:@"kii12345" andError:&error];
     [user setObject:@"121320540207054848 " forKey:@"internalUserID"];
     
    
@@ -65,13 +65,13 @@
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
 	NSLog(@"My token is: %@", deviceToken);
-    
+    /*
     [Kii setAPNSDeviceToken:deviceToken];
-    // NSError* error;
-     //[KiiPushInstallation installSynchronous:&error];
-     
+     NSError* error;
+     [KiiPushInstallation installSynchronous:&error];
+    NSLog(@"%@",error);
     
-     /**/
+     */
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
@@ -92,7 +92,7 @@
     
     NSError* error=nil;
     KiiTopic* topic=[user topicWithName:@"testTopics"];
-   // [topic saveSynchronous:&error];
+    [topic saveSynchronous:&error];
     [KiiPushSubscription subscribeSynchronous:topic withError:&error];
     KiiAPNSFields* fields=[KiiAPNSFields createFields];
     fields.alertBody=@"Test";

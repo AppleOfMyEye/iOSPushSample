@@ -24,6 +24,7 @@
 		74206F1B16B93E3100CA8AA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74206F1916B93E3100CA8AA6 /* InfoPlist.strings */; };
 		74206F1E16B93E3100CA8AA6 /* KiiPushSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74206F1D16B93E3100CA8AA6 /* KiiPushSampleTests.m */; };
 		74206F2816B93E5C00CA8AA6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74206F2716B93E5C00CA8AA6 /* MobileCoreServices.framework */; };
+		7498752B16E9B351008AAF6C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74206F2716B93E5C00CA8AA6 /* MobileCoreServices.framework */; };
 		74CB2C9916CB42DA00EAF472 /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CB2C9816CB42DA00EAF472 /* KiiSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7498752B16E9B351008AAF6C /* MobileCoreServices.framework in Frameworks */,
 				74206F1116B93E3100CA8AA6 /* SenTestingKit.framework in Frameworks */,
 				74206F1216B93E3100CA8AA6 /* UIKit.framework in Frameworks */,
 				74206F1316B93E3100CA8AA6 /* Foundation.framework in Frameworks */,
@@ -430,6 +432,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiiPushSample/KiiPushSample-Prefix.pch";
@@ -447,6 +450,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiiPushSample/KiiPushSample-Prefix.pch";
